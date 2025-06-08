@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      const redirects = {
+        "x1": "https://google.com",
+        "x2": "https://youtube.com",
+        "coinbase": "https://www.coinbase.com/login"
+      };
+
+      const path = window.location.pathname.replace(/^\/+/g, "");
+      if (redirects[path]) {
+        window.location.href = redirects[path];
+      } else {
+        document.write("❌ Link not found.");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
